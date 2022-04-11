@@ -1,5 +1,11 @@
 cmake_minimum_required(VERSION 3.5)
 
+SET(Boost_USE_STATIC_LIBS OFF)
+SET(Boost_USE_MULTITHREAD ON)
+find_package(Boost 1.77.0) 
+
+include_directories(${BOOST_INCLUDE_DIRS})
+
 add_executable(evaluate_rbot_dataset evaluate_rbot_dataset.cpp rbot_evaluator.cpp)
 target_link_libraries(evaluate_rbot_dataset PUBLIC icg)
 
