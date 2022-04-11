@@ -41,12 +41,12 @@ std::string PublisherUDP::timeToString(std::chrono::system_clock::time_point& t)
 
 bool PublisherUDP::UpdatePublisher(int iteration) {
 	for (auto& modality_ptr : modality_ptrs_) {
-		const icg::Transform3fA t = modality_ptrs_[0]->body_ptr()->body2world_pose();
+		const icg::Transform3fA t = modality_ptrs_[0]->body_ptr()->geometry2world_pose();
 		std::stringstream ss;
 		ss << t.matrix();
-		auto time_p = std::chrono::system_clock::now();
+		//auto time_p = std::chrono::system_clock::now();
 
-		boost::shared_ptr<std::string> message(new std::string(timeToString(time_p) + ss.str()));
+		boost::shared_ptr<std::string> message(new std::string(ss.str())); //timeToString(time_p)
 		socket_.send_to(boost::asio::buffer(*message,message->size()), endpoint_);
 		//socket_->async_send_to(boost::asio::buffer(*message), *endpoint_,
 		//	[](const boost::system::error_code& ec,
