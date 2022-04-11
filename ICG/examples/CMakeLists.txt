@@ -34,6 +34,6 @@ if (USE_AZURE_KINECT)
     add_executable(record_camera_sequence record_camera_sequence.cpp)
     target_link_libraries(record_camera_sequence PUBLIC icg)
 
-    add_executable(run_on_camera_sequence run_on_camera_sequence.cpp)
+    add_executable(run_on_camera_sequence run_on_camera_sequence.cpp publisherudp.h publisherudp.cpp)
     target_link_libraries(run_on_camera_sequence PUBLIC icg)
 endif ()

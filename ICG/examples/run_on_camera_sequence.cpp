@@ -19,6 +19,8 @@
 #include <memory>
 #include <string>
 
+#include "publisherudp.h"
+
 int main(int argc, char *argv[]) {
   if (argc < 3) {
     std::cerr << "Not enough arguments: Provide directory and body_names";
@@ -116,6 +118,12 @@ int main(int argc, char *argv[]) {
     body1_optimizer_ptr->AddModality(region_modality_ptr);
     body1_optimizer_ptr->AddModality(depth_modality_ptr);
     tracker_ptr->AddOptimizer(body1_optimizer_ptr);
+	
+	// Init Publisher
+    auto publisher_ptr{ std::make_shared<PublisherUDP>("publisher") };
+    publisher_ptr->SetUp();
+    publisher_ptr->AddModality(region_modality_ptr);
+    tracker_ptr->AddPublisher(publisher_ptr);
   }
 
   // Start tracking
