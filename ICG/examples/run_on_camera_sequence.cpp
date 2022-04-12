@@ -122,7 +122,7 @@ int main(int argc, char *argv[]) {
 	// Init Publisher
     auto publisher_ptr{ std::make_shared<PublisherUDP>("publisher") };
     publisher_ptr->SetUp();
-    publisher_ptr->AddModality(region_modality_ptr);
+    publisher_ptr->AddBody(body_ptr);
     tracker_ptr->AddPublisher(publisher_ptr);
   }
 

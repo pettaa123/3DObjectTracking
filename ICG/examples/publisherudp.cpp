@@ -22,13 +22,18 @@ bool PublisherUDP::SetUp() {
 	return true;
 }
 
-bool PublisherUDP::AddModality(const std::shared_ptr<icg::Modality>& modality_ptr) {
+bool PublisherUDP::AddBody(const std::shared_ptr<icg::Body>& body_ptr) {
 	set_up_ = false;
-	if (!AddPtrIfNameNotExists(modality_ptr, &modality_ptrs_)) {
-		std::cerr << "Modality " << modality_ptr->name() << " already exists"
-			<< std::endl;
-		return false;
+	// Check if renderer geometry for body already exists
+	for (auto& p : body_ptrs_) {
+		if (body_ptr->name() == p->name()) {
+			std::cerr << "Body data " << body_ptr->name() << " already exists"
+				<< std::endl;
+			return false;
+		}
 	}
+	// Add body ptr and body data
+	body_ptrs_.push_back(body_ptr);
 	return true;
 }
 
@@ -40,8 +45,8 @@ std::string PublisherUDP::timeToString(std::chrono::system_clock::time_point& t)
 }
 
 bool PublisherUDP::UpdatePublisher(int iteration) {
-	for (auto& modality_ptr : modality_ptrs_) {
-		const icg::Transform3fA t = modality_ptrs_[0]->body_ptr()->geometry2world_pose();
+	for (auto& modality_ptr : body_ptrs_) {
+		const icg::Transform3fA t = body_ptrs_[0]->geometry2world_pose();
 		std::stringstream ss;
 		ss << t.matrix();
 		//auto time_p = std::chrono::system_clock::now();

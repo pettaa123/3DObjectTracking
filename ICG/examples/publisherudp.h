@@ -2,11 +2,10 @@
 #define ICG_PUBLISHER_UDP_
 
 #include <icg/publisher.h>
-#include <icg/modality.h>
+#include <icg/body.h>
 
 #include <boost/asio.hpp>
-#include <boost/array.hpp>
-#include <boost/bind.hpp>
+//#include <boost/array.hpp>
 
 
 class PublisherUDP : public icg::Publisher
@@ -18,7 +17,7 @@ public:
 
     bool UpdatePublisher(int iteration);
 
-    bool AddModality(const std::shared_ptr<icg::Modality>& modality_ptr);
+    bool AddBody(const std::shared_ptr<icg::Body>& body_ptr);
 
     ~PublisherUDP();
 
@@ -28,7 +27,7 @@ private:
     boost::asio::ip::udp::socket socket_;
     boost::asio::ip::udp::endpoint endpoint_;
 
-    std::vector<std::shared_ptr<icg::Modality>> modality_ptrs_{};
+    std::vector<std::shared_ptr<icg::Body>> body_ptrs_;
 
     std::string timeToString(std::chrono::system_clock::time_point& t);
 
