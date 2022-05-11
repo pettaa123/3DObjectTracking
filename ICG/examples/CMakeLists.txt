@@ -6,6 +6,9 @@ find_package(Boost 1.77.0)
 
 include_directories(${BOOST_INCLUDE_DIRS})
 
+add_executable(evaluate_rbot_dataset_publish evaluate_rbot_dataset_publish.cpp rbot_evaluator_publish.cpp publisherudp.h publisherudp.cpp)
+target_link_libraries(evaluate_rbot_dataset_publish PUBLIC icg)
+
 add_executable(evaluate_rbot_dataset evaluate_rbot_dataset.cpp rbot_evaluator.cpp)
 target_link_libraries(evaluate_rbot_dataset PUBLIC icg)
 

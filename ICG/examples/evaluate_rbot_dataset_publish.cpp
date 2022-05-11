@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 // Copyright (c) 2022 Manuel Stoiber, German Aerospace Center (DLR)
 
-#include "rbot_evaluator.h"
+#include "rbot_evaluator_publish.h"
 
 int main() {
   // Directories
@@ -54,7 +54,7 @@ int main() {
     t->set_n_update_iterations(2);
     t->set_n_corr_iterations(7);
   });
-  evaluator.set_visualize_all_results(false);
+  evaluator.set_visualize_all_results(true);
   evaluator.SaveResults(result_directory);
   evaluator.SetUp();
   evaluator.Evaluate();

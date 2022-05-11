@@ -70,6 +70,9 @@ int main(int argc, char *argv[]) {
       std::make_shared<icg::FocusedBasicDepthRenderer>(
           "depth_depth_renderer", renderer_geometry_ptr, depth_camera_ptr)};
 
+  // Init Publisher
+  auto publisher_ptr{ std::make_shared<PublisherUDP>("publisher") };
+
   for (const auto body_name : body_names) {
     // Set up body
     std::filesystem::path metafile_path{directory / (body_name + ".yaml")};
@@ -118,13 +121,13 @@ int main(int argc, char *argv[]) {
     body1_optimizer_ptr->AddModality(region_modality_ptr);
     body1_optimizer_ptr->AddModality(depth_modality_ptr);
     tracker_ptr->AddOptimizer(body1_optimizer_ptr);
-	
-	// Init Publisher
-    auto publisher_ptr{ std::make_shared<PublisherUDP>("publisher") };
-    publisher_ptr->SetUp();
+
+    //add body to publisher
     publisher_ptr->AddBody(body_ptr);
-    tracker_ptr->AddPublisher(publisher_ptr);
   }
+
+  publisher_ptr->SetUp();
+  tracker_ptr->AddPublisher(publisher_ptr);
 
   // Start tracking
   if (!tracker_ptr->SetUp()) return 0;
