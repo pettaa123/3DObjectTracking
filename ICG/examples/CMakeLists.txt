@@ -2,12 +2,12 @@ cmake_minimum_required(VERSION 3.5)
 
 SET(Boost_USE_STATIC_LIBS OFF)
 SET(Boost_USE_MULTITHREAD ON)
-find_package(Boost 1.77.0) 
+find_package(Boost 1.65.1 COMPONENTS system) 
 
 include_directories(${BOOST_INCLUDE_DIRS})
 
 add_executable(evaluate_rbot_dataset_publish evaluate_rbot_dataset_publish.cpp rbot_evaluator_publish.cpp publisherudp.h publisherudp.cpp)
-target_link_libraries(evaluate_rbot_dataset_publish PUBLIC icg)
+target_link_libraries(evaluate_rbot_dataset_publish PUBLIC icg ${Boost_LIBRARIES})
 
 add_executable(evaluate_rbot_dataset evaluate_rbot_dataset.cpp rbot_evaluator.cpp)
 target_link_libraries(evaluate_rbot_dataset PUBLIC icg)
@@ -44,5 +44,5 @@ if (USE_AZURE_KINECT)
     target_link_libraries(record_camera_sequence PUBLIC icg)
 
     add_executable(run_on_camera_sequence run_on_camera_sequence.cpp publisherudp.h publisherudp.cpp)
-    target_link_libraries(run_on_camera_sequence PUBLIC icg)
+    target_link_libraries(run_on_camera_sequence PUBLIC icg ${Boost_LIBRARIES})
 endif ()

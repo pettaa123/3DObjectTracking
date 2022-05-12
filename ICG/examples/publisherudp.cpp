@@ -16,7 +16,11 @@ bool PublisherUDP::SetUp() {
 	endpoint_.address(boost::asio::ip::address::from_string(host));
 	endpoint_.port(port);
 
-	socket_.open(boost::asio::ip::udp::v4());
+
+	boost::system::error_code lErrorCode;
+	socket_.open(boost::asio::ip::udp::v4(),lErrorCode);
+	std::cout << "opening socket: " <<  lErrorCode.message() << std::endl;
+	
 
 	set_up_ = true;
 	return true;
@@ -67,7 +71,9 @@ bool PublisherUDP::UpdatePublisher(int iteration) {
 }
 
 PublisherUDP::~PublisherUDP() {
-	socket_.close();
+	boost::system::error_code lErrorCode;
+	socket_.close(lErrorCode);
+	std::cout << "closing socket: " <<  lErrorCode.message() << std::endl;
 }
 
 

@@ -6,11 +6,11 @@
 int main() {
   // Directories
   //std::filesystem::path dataset_directory{"/your/path/"}; 
-  std::filesystem::path dataset_directory{"E:/RBOT_dataset/"};
+  std::filesystem::path dataset_directory{"/media/albr/128GB/RBOT_dataset/"};
   //std::filesystem::path external_directory{"/your/path/"};
-  std::filesystem::path external_directory{ "E:/external/" };
+  std::filesystem::path external_directory{ "/media/albr/128GB/external/" };
   //std::filesystem::path result_directory{"/your/path/"};
-  std::filesystem::path result_directory{ "E:/result" };
+  std::filesystem::path result_directory{ "/media/albr/128GB/result" };
 
   // Dataset configuration
   std::vector<std::string> body_names{
