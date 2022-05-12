@@ -52,7 +52,7 @@ bool PublisherUDP::UpdatePublisher(int iteration) {
 	std::stringstream ss;
 	for (auto& p : body_ptrs_) {
 		const icg::Transform3fA t = p->geometry2world_pose();
-		ss << p->name() + ": ";
+		ss << " " + p->name() + ": ";
 		ss << t.matrix();
 		//auto time_p = std::chrono::system_clock::now();
 	}
