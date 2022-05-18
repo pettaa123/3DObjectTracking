@@ -1,7 +1,0 @@
-<map id="icg::ColorCamera" name="icg::ColorCamera">
-<area shape="rect" id="node1" title="Abstract Camera class that defines a color camera." alt="" coords="242,80,365,107"/>
-<area shape="rect" id="node3" href="$classicg_1_1AzureKinectColorCamera.html" title="Camera that allows getting color images from an AzureKinect camera." alt="" coords="5,155,199,181"/>
-<area shape="rect" id="node4" href="$classicg_1_1LoaderColorCamera.html" title="Camera that allows loading color images from a directory." alt="" coords="223,155,384,181"/>
-<area shape="rect" id="node5" href="$classicg_1_1RealSenseColorCamera.html" title="Camera that allows getting color images from a RealSense camera." alt="" coords="408,155,593,181"/>
-<area shape="rect" id="node2" href="$classicg_1_1Camera.html" title="Abstract class that provides images to other components and contains intrinsics as well as the pose o..." alt="" coords="257,5,349,32"/>
-</map>

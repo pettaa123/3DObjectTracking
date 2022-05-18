@@ -1,6 +1,0 @@
-<map id="icg::ColorViewer" name="icg::ColorViewer">
-<area shape="rect" id="node1" title="Abstract Viewer class that defines a color viewer." alt="" coords="112,80,228,107"/>
-<area shape="rect" id="node3" href="$classicg_1_1ImageColorViewer.html" title="Viewer that displays color images from a ColorCamera." alt="" coords="5,155,156,181"/>
-<area shape="rect" id="node4" href="$classicg_1_1NormalColorViewer.html" title="Viewer that overlays color images from a ColorCamera with normal renderings based on the geometry sto..." alt="" coords="181,155,338,181"/>
-<area shape="rect" id="node2" href="$classicg_1_1Viewer.html" title="Abstract class that defines a viewer and functionality to view and save images." alt="" coords="127,5,213,32"/>
-</map>

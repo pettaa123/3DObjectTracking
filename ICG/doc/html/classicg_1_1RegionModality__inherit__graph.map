@@ -1,4 +1,0 @@
-<map id="icg::RegionModality" name="icg::RegionModality">
-<area shape="rect" id="node1" title="Modality class that implements a region&#45;based modality, which uses information from a ColorCamera and..." alt="" coords="5,80,141,107"/>
-<area shape="rect" id="node2" href="$classicg_1_1Modality.html" title="Abstract class that considers information from a Camera to calculate the gradient vector and Hessian ..." alt="" coords="25,5,121,32"/>
-</map>

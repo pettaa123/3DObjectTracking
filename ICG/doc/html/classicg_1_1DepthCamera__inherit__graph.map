@@ -1,7 +1,0 @@
-<map id="icg::DepthCamera" name="icg::DepthCamera">
-<area shape="rect" id="node1" title="Abstract Camera class that defines a depth camera that, in addition to intrinsics,..." alt="" coords="246,80,373,107"/>
-<area shape="rect" id="node3" href="$classicg_1_1AzureKinectDepthCamera.html" title="Camera that allows getting color images from an AzureKinect camera." alt="" coords="5,155,203,181"/>
-<area shape="rect" id="node4" href="$classicg_1_1LoaderDepthCamera.html" title="Camera that allows loading depth images from a directory." alt="" coords="227,155,392,181"/>
-<area shape="rect" id="node5" href="$classicg_1_1RealSenseDepthCamera.html" title="Camera that allows getting depth images from a RealSense camera." alt="" coords="416,155,605,181"/>
-<area shape="rect" id="node2" href="$classicg_1_1Camera.html" title="Abstract class that provides images to other components and contains intrinsics as well as the pose o..." alt="" coords="263,5,355,32"/>
-</map>

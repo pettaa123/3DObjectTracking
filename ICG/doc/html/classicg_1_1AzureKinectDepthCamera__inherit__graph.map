@@ -1,5 +1,0 @@
-<map id="icg::AzureKinectDepthCamera" name="icg::AzureKinectDepthCamera">
-<area shape="rect" id="node1" title="Camera that allows getting color images from an AzureKinect camera." alt="" coords="5,155,203,181"/>
-<area shape="rect" id="node2" href="$classicg_1_1DepthCamera.html" title="Abstract Camera class that defines a depth camera that, in addition to intrinsics,..." alt="" coords="41,80,167,107"/>
-<area shape="rect" id="node3" href="$classicg_1_1Camera.html" title="Abstract class that provides images to other components and contains intrinsics as well as the pose o..." alt="" coords="58,5,150,32"/>
-</map>

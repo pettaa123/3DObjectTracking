@@ -1,9 +1,0 @@
-<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classicg_1_1Viewer.html" title="Abstract class that defines a viewer and functionality to view and save images." alt="" coords="5,81,92,108"/>
-<area shape="rect" id="node2" href="$classicg_1_1ColorViewer.html" title="Abstract Viewer class that defines a color viewer." alt="" coords="142,56,258,83"/>
-<area shape="rect" id="node5" href="$classicg_1_1DepthViewer.html" title="Abstract Viewer class that defines a depth viewer that normalizes images between a set minimum and ma..." alt="" coords="140,107,260,133"/>
-<area shape="rect" id="node3" href="$classicg_1_1ImageColorViewer.html" title="Viewer that displays color images from a ColorCamera." alt="" coords="313,5,464,32"/>
-<area shape="rect" id="node4" href="$classicg_1_1NormalColorViewer.html" title="Viewer that overlays color images from a ColorCamera with normal renderings based on the geometry sto..." alt="" coords="310,56,467,83"/>
-<area shape="rect" id="node6" href="$classicg_1_1ImageDepthViewer.html" title="Viewer that displays depth images from a DepthCamera that are normalized between a defined minimum an..." alt="" coords="311,107,466,133"/>
-<area shape="rect" id="node7" href="$classicg_1_1NormalDepthViewer.html" title="Viewer that overlays normalized depth images from a DepthCamera with normal renderings based on the g..." alt="" coords="308,157,469,184"/>
-</map>
