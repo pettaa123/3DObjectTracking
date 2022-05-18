@@ -20,6 +20,7 @@
 #include <string>
 
 #include "publisherudp.h"
+#include <icg/videofeed.h>
 
 int main(int argc, char *argv[]) {
   if (argc < 3) {
@@ -32,7 +33,7 @@ int main(int argc, char *argv[]) {
     body_names.push_back(std::string{argv[i]});
   }
 
-  constexpr bool kUseDepthViewer = true;
+  constexpr bool kUseDepthViewer = false;
   constexpr bool kMeasureOcclusions = true;
   constexpr bool kModelOcclusions = false;
   constexpr bool kVisualizePoseResult = false;
@@ -53,6 +54,9 @@ int main(int argc, char *argv[]) {
   // Set up viewers
   auto color_viewer_ptr{std::make_shared<icg::NormalColorViewer>(
       "color_viewer", color_camera_ptr, renderer_geometry_ptr)};
+  //disable integrated display window
+  //color_viewer_ptr->set_display_images(false);
+
   if (kSaveImages) color_viewer_ptr->StartSavingImages(save_directory, "bmp");
   tracker_ptr->AddViewer(color_viewer_ptr);
   if (kUseDepthViewer) {
@@ -72,6 +76,11 @@ int main(int argc, char *argv[]) {
 
   // Init Publisher
   auto publisher_ptr{ std::make_shared<PublisherUDP>("publisher") };
+
+  // Init Videofeed
+  auto videofeed_ptr{ std::make_shared<icg::Videofeed>(8000)};
+
+  color_viewer_ptr->set_videofeed_ptr(videofeed_ptr);
 
   for (const auto body_name : body_names) {
     // Set up body
@@ -126,9 +135,7 @@ int main(int argc, char *argv[]) {
     publisher_ptr->AddBody(body_ptr);
   }
 
-  publisher_ptr->SetUp();
   tracker_ptr->AddPublisher(publisher_ptr);
-
   // Start tracking
   if (!tracker_ptr->SetUp()) return 0;
   if (!tracker_ptr->RunTrackerProcess(true, false)) return 0;

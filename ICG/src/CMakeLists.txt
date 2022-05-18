@@ -9,7 +9,7 @@ set(SOURCES
         image_viewer.cpp normal_viewer.cpp modality.cpp region_modality.cpp
         depth_modality.cpp optimizer.cpp detector.cpp static_detector.cpp
         manual_detector.cpp refiner.cpp publisher.cpp tracker.cpp
-        generator.cpp)
+        generator.cpp videofeed.cpp)
 
 if (USE_AZURE_KINECT)
     list(APPEND SOURCES azure_kinect_camera.cpp)

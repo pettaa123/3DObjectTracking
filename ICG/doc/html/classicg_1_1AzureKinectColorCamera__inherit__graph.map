@@ -1,0 +1,5 @@
+<map id="icg::AzureKinectColorCamera" name="icg::AzureKinectColorCamera">
+<area shape="rect" id="node1" title="Camera that allows getting color images from an AzureKinect camera." alt="" coords="5,155,199,181"/>
+<area shape="rect" id="node2" href="$classicg_1_1ColorCamera.html" title="Abstract Camera class that defines a color camera." alt="" coords="41,80,163,107"/>
+<area shape="rect" id="node3" href="$classicg_1_1Camera.html" title="Abstract class that provides images to other components and contains intrinsics as well as the pose o..." alt="" coords="56,5,148,32"/>
+</map>

@@ -92,6 +92,12 @@ void NormalColorViewer::set_renderer_geometry_ptr(
   set_up_ = false;
 }
 
+void NormalColorViewer::set_videofeed_ptr(
+    const std::shared_ptr<Videofeed> &videofeed_ptr) {
+    videofeed_ptr_ = videofeed_ptr;
+    set_up_ = false;
+}
+
 void NormalColorViewer::set_opacity(float opacity) { opacity_ = opacity; }
 
 bool NormalColorViewer::UpdateViewer(int save_index) {
@@ -105,10 +111,14 @@ bool NormalColorViewer::UpdateViewer(int save_index) {
   renderer_.StartRendering();
   renderer_.FetchNormalImage();
 
+  //create image
+  currentImage_ = CalculateAlphaBlend(color_camera_ptr_->image(),
+      renderer_.normal_image(), opacity_);
+
+  videofeed_ptr_->UpdateVideofeed(currentImage_);
+
   // Display and save images
-  DisplayAndSaveImage(save_index,
-                      CalculateAlphaBlend(color_camera_ptr_->image(),
-                                          renderer_.normal_image(), opacity_));
+  DisplayAndSaveImage(save_index, currentImage_);
   return true;
 }
 
@@ -118,6 +128,8 @@ std::shared_ptr<RendererGeometry> NormalColorViewer::renderer_geometry_ptr()
 }
 
 float NormalColorViewer::opacity() const { return opacity_; }
+
+cv::Mat NormalColorViewer::currentImage() const { return currentImage_; }
 
 bool NormalColorViewer::LoadMetaData() {
   // Open file storage from yaml

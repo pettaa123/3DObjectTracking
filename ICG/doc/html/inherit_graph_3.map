@@ -1,0 +1,11 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classicg_1_1Camera.html" title="Abstract class that provides images to other components and contains intrinsics as well as the pose o..." alt="" coords="5,145,97,172"/>
+<area shape="rect" id="node2" href="$classicg_1_1ColorCamera.html" title="Abstract Camera class that defines a color camera." alt="" coords="147,95,270,121"/>
+<area shape="rect" id="node6" href="$classicg_1_1DepthCamera.html" title="Abstract Camera class that defines a depth camera that, in addition to intrinsics,..." alt="" coords="145,171,272,197"/>
+<area shape="rect" id="node3" href="$classicg_1_1AzureKinectColorCamera.html" title="Camera that allows getting color images from an AzureKinect camera." alt="" coords="322,5,515,32"/>
+<area shape="rect" id="node4" href="$classicg_1_1LoaderColorCamera.html" title="Camera that allows loading color images from a directory." alt="" coords="338,56,499,83"/>
+<area shape="rect" id="node5" href="$classicg_1_1RealSenseColorCamera.html" title="Camera that allows getting color images from a RealSense camera." alt="" coords="326,107,511,133"/>
+<area shape="rect" id="node7" href="$classicg_1_1AzureKinectDepthCamera.html" title="Camera that allows getting color images from an AzureKinect camera." alt="" coords="320,157,517,184"/>
+<area shape="rect" id="node8" href="$classicg_1_1LoaderDepthCamera.html" title="Camera that allows loading depth images from a directory." alt="" coords="336,208,501,235"/>
+<area shape="rect" id="node9" href="$classicg_1_1RealSenseDepthCamera.html" title="Camera that allows getting depth images from a RealSense camera." alt="" coords="324,259,513,285"/>
+</map>

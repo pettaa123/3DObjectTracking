@@ -9,6 +9,8 @@
 #include <icg/normal_renderer.h>
 #include <icg/renderer_geometry.h>
 #include <icg/viewer.h>
+#include <icg/videofeed.h>
+
 
 #include <memory>
 #include <opencv2/opencv.hpp>
@@ -42,6 +44,8 @@ class NormalColorViewer : public ColorViewer {
   void set_renderer_geometry_ptr(
       const std::shared_ptr<RendererGeometry> &renderer_geometry_ptr);
   void set_opacity(float opacity);
+  void set_videofeed_ptr(
+      const std::shared_ptr<Videofeed> &videofeed_ptr);
 
   // Main methods
   bool UpdateViewer(int save_index) override;
@@ -49,6 +53,7 @@ class NormalColorViewer : public ColorViewer {
   // Getters
   std::shared_ptr<RendererGeometry> renderer_geometry_ptr() const override;
   float opacity() const;
+  cv::Mat currentImage() const;
 
  private:
   // Helper method
@@ -56,8 +61,10 @@ class NormalColorViewer : public ColorViewer {
 
   // Data
   std::shared_ptr<RendererGeometry> renderer_geometry_ptr_ = nullptr;
+  std::shared_ptr<Videofeed> videofeed_ptr_ = nullptr;
   FullNormalRenderer renderer_;
   float opacity_ = 0.5f;
+  cv::Mat currentImage_;
 };
 
 /**

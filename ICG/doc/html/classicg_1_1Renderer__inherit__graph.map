@@ -1,0 +1,11 @@
+<map id="icg::Renderer" name="icg::Renderer">
+<area shape="rect" id="node1" title="Abstract class that defines a renderer as a single camera at a defined location." alt="" coords="5,81,104,108"/>
+<area shape="rect" id="node2" href="$classicg_1_1FocusedRenderer.html" title="Abstract Renderer class that defines a focused renderer that crops and scales the scene to focus on r..." alt="" coords="152,56,301,83"/>
+<area shape="rect" id="node6" href="$classicg_1_1FullRenderer.html" title="Abstract Renderer class that defines a full renderer that renders the image according to the image wi..." alt="" coords="167,107,287,133"/>
+<area shape="rect" id="node3" href="$classicg_1_1FocusedDepthRenderer.html" title="Abstract Renderer class that defines a focused depth renderer that extends the FocusedRenderer class ..." alt="" coords="349,56,532,83"/>
+<area shape="rect" id="node4" href="$classicg_1_1FocusedBasicDepthRenderer.html" title="Renderer that extends the focused depth renderer class with functionality from BasicDepthRendererCore..." alt="" coords="580,5,796,32"/>
+<area shape="rect" id="node5" href="$classicg_1_1FocusedNormalRenderer.html" title="Renderer that extends the focused depth renderer class with functionality from NormalRendererCore to ..." alt="" coords="593,56,783,83"/>
+<area shape="rect" id="node7" href="$classicg_1_1FullDepthRenderer.html" title="Abstract Renderer class that defines a full depth renderer that extends the FullRenderer class with f..." alt="" coords="363,107,518,133"/>
+<area shape="rect" id="node8" href="$classicg_1_1FullBasicDepthRenderer.html" title="Renderer that extends the full depth renderer class with functionality from BasicDepthRendererCore to..." alt="" coords="595,107,781,133"/>
+<area shape="rect" id="node9" href="$classicg_1_1FullNormalRenderer.html" title="Renderer that extends the full depth renderer class with functionality from NormalRendererCore to ren..." alt="" coords="607,157,769,184"/>
+</map>

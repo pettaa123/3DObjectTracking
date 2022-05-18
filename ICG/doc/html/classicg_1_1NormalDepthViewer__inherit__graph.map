@@ -1,0 +1,5 @@
+<map id="icg::NormalDepthViewer" name="icg::NormalDepthViewer">
+<area shape="rect" id="node1" title="Viewer that overlays normalized depth images from a DepthCamera with normal renderings based on the g..." alt="" coords="5,155,167,181"/>
+<area shape="rect" id="node2" href="$classicg_1_1DepthViewer.html" title="Abstract Viewer class that defines a depth viewer that normalizes images between a set minimum and ma..." alt="" coords="26,80,146,107"/>
+<area shape="rect" id="node3" href="$classicg_1_1Viewer.html" title="Abstract class that defines a viewer and functionality to view and save images." alt="" coords="43,5,129,32"/>
+</map>

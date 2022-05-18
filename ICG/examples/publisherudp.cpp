@@ -12,14 +12,14 @@ bool PublisherUDP::SetUp() {
 	set_up_ = false;
 
 	std::string host = "127.0.0.1";
-	short port = 53586;
+	short port = 9000; //short +32767
 	endpoint_.address(boost::asio::ip::address::from_string(host));
 	endpoint_.port(port);
 
 
 	boost::system::error_code lErrorCode;
 	socket_.open(boost::asio::ip::udp::v4(),lErrorCode);
-	std::cout << "opening socket: " <<  lErrorCode.message() << std::endl;
+	std::cout << "opening publisher socket on "<< port << ": " <<  lErrorCode.message() << std::endl;
 	
 
 	set_up_ = true;
